@@ -19,3 +19,5 @@ before_install:
     - npm install -g grunt-cli
 after_script:
     - grunt coveralls
+script:
+    - ${TRAVIS_BUILD_DIR}/.travis.d/docker_shipit.sh cabify/aglio || travis_terminate 1
